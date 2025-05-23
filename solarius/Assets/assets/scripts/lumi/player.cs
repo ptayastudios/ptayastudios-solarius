@@ -29,6 +29,9 @@ public class player : MonoBehaviour
     public Rigidbody2D rig;
     public Animator anim;
     public SpriteRenderer sr;
+
+
+    
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -36,91 +39,131 @@ public class player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    void fixedUpdate(){
+    void Update(){
         var grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
-        if(grd){jmps = 2;}
-    }
-    void Update()
-    {
-        
         mov = Input.GetAxisRaw("Horizontal");
-        rig.linearVelocity = new Vector2(mov*spd, rig.linearVelocity.y);
-        
-        if(Input.GetButtonDown("Jump") && jmps > 0){
-            if(jmps == 2){
-                rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF);
-            }else{
-                if(mov != 0){airJmpMov = true;}
-                rig.linearVelocity = new Vector2(rig.linearVelocity.x, 0);
-                jmps--;
-                airJmp = true;
-            }
-        }
-        
-        if(airJmp)
+        rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
+
+        if (Input.GetButtonDown("Jump") && jmps > 0)
         {
-            if(airJmpMov){
-                rig.linearVelocity = new Vector2(dir*airJmpMovM, jmpF*jmpM/2);
-            }else{
-                rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF*jmpM);
-            }
+            jump();
         }
 
-        if(airJmp && jmpM < 1){
+        if (airJmp)
+        {
+            airJump();
+        }
+
+
+
+
+
+
+ 
+        if (grd) { jmps = 2; }
+
+
+        if (airJmp && jmpM < 1) {
             jmpM += jmpMf;
         }
-        
-        if(jmpM >= 1){
+
+        if (jmpM >= 1) {
             airJmp = false;
-            jmpM = 0;  
+            jmpM = 0;
             airJmpMov = false;
         }
 
 
 
-        if(slide){
-            rig.linearVelocity = new Vector2(rig.linearVelocity.x, sldF);
-        }
 
-
-
-        if(mov < 0){
+        if (mov < 0) {
             dir = -1;
-        }else if(mov > 0){
+        } else if (mov > 0) {
             dir = 1;
         }
 
-        if(ground){
-            if(mov!=0){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if (grd || ground)
+        {
+            if (mov != 0)
+            {
                 anim.SetInteger("transition", 2);
-            }else{
+            }
+            else
+            {
                 anim.SetInteger("transition", 1);
             }
 
-        }else{
-
-            if(!airJmp){
-                if(rig.linearVelocity.y > 0){
-                     anim.SetInteger("transition", 3);
-                }else{
-                      anim.SetInteger("transition", 4);
+        }
+        else
+        {
+            if (!airJmp)
+            {
+                if (rig.linearVelocity.y > 0)
+                {
+                    anim.SetInteger("transition", 3);
                 }
-            }else{
-                if(airJmpMov){
+                else
+                {
+                    anim.SetInteger("transition", 4);
+                }
+            }
+            else
+            {
+                if (airJmpMov)
+                {
                     anim.SetInteger("transition", 6);
-                }else{
+                }
+                else
+                {
                     anim.SetInteger("transition", 5);
                 }
             }
-            
-        }
-        //transform.localScale = new Vector3(dir,1,1);
+    }
+
+    
         if(dir > 0){sr.flipX = false;
         }else{sr.flipX = true;}
+
+
+
         
-}
+            
+    }
 
+    void jump(){
+            if (jmps == 2){
+                rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF);
+            }
+            else{
+                if (mov != 0) { airJmpMov = true; }
+                rig.linearVelocity = new Vector2(rig.linearVelocity.x, 0);
+                jmps--;
+                airJmp = true;
+            }
+    }    
 
+    void airJump(){
+        if (airJmpMov){
+                rig.linearVelocity = new Vector2(dir * airJmpMovM, jmpF * jmpM / 2);
+            }
+            else{
+                rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF * jmpM);
+            }
+    }
 
 
 
@@ -130,25 +173,20 @@ public class player : MonoBehaviour
             ground = true;
         }
     }
+
     void OnCollisionExit2D(Collision2D coll){
         if(coll.gameObject.tag == "ground"){
             jmps --;
             ground = false;
         }
     }
+
     void OnCollisionStay2D(Collision2D coll){
         if(coll.gameObject.tag == "ground"){
             jmps = 2;
             ground = true;
         }
     }   
-
-
-
-
-
-
-
 
 
     void OnTriggerEnter2D(Collider2D coll){
@@ -171,13 +209,12 @@ public class player : MonoBehaviour
         }
      */   
     }
+
     void OnTriggerExit2D(Collider2D coll){
         if(coll.gameObject.tag == "ground"){
             slide = false;
         }
     }
-
-
 
     void OnTriggerStay2D(Collider2D coll){
         if(coll.gameObject.tag == "ground"){

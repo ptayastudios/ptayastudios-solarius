@@ -11,7 +11,7 @@ public class punch : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position += transform.right * spd * capazMan * Time.deltaTime;
         capazMan -= 0.1f;

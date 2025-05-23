@@ -12,6 +12,7 @@ public class pequenoSentinela : MonoBehaviour
     public float dd;
     public string state;
     public Transform player;
+    public GameObject PlayerObject;
     public bool dead;
     public float ooohTime;
     public float ooohTimeMax;
@@ -38,9 +39,10 @@ public class pequenoSentinela : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         rig = GetComponent<Rigidbody2D>();
+        PlayerObject = GameObject.Find("lumi");
+        player = PlayerObject.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         var grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
