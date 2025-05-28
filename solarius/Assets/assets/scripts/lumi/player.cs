@@ -31,6 +31,18 @@ public class player : MonoBehaviour
     public SpriteRenderer sr;
 
 
+
+
+
+    public string[] habilities = new string[16];
+    public int aHability = 1;
+    public int[] slots = new int[5];
+    public int aSlot;
+    public int fire;
+
+    public string hAdd;
+
+
     
     void Start()
     {
@@ -167,10 +179,35 @@ public class player : MonoBehaviour
 
 
 
-    void OnCollisionEnter2D(Collision2D coll){
-        if(coll.gameObject.tag == "ground"){
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "ground")
+        {
             jmps = 2;
             ground = true;
+        }
+        
+
+
+        if(coll.gameObject.tag == "hability"){
+            
+            var item = coll.gameObject.GetComponent<habilityItem>();
+            if (item != null)
+            {
+                lumi_golpes managerScript = habilityManager.GetComponent<lumi_golpes>();
+
+                if (managerScript != null)
+                {
+                    //managerScript.hAdd = item.nome;
+                    
+
+                    if(hAdd != "" && aHability < habilities.Length){
+                        habilities[aHability] = hAdd;
+                        aHability++;
+                        hAdd = "";
+                    }
+                }
+            }
         }
     }
 
@@ -194,20 +231,8 @@ public class player : MonoBehaviour
             slide = true;
         }
 
-/*
-        if(coll.gameObject.tag == "hability"){
-            HabilityItem item = coll.GetComponent<HabilityItem>();
-            if (item != null)
-            {
-                lumi_golpes managerScript = habilityManager.GetComponent<lumi_golpes>();
 
-                if(managerScript != null)
-                {
-                    managerScript.hAdd = item.nome;
-                }
-            }
-        }
-     */   
+        
     }
 
     void OnTriggerExit2D(Collider2D coll){

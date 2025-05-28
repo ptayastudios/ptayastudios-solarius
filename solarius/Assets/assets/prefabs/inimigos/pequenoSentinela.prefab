@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 1
-  spdM: 1
+  spdM: 2
   aspd: 0
   dmgspd: 0
   spdI: 0.1

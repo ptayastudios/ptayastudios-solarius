@@ -75,7 +75,7 @@ public class pequenoSentinela : MonoBehaviour
             case "chase":
                 dmgTimer = 0;
                 
-                if(grd){
+                if(ground){
                     if(aspd < spdM*dir*1.2f){aspd+=spdI;}
                     else{aspd-=spdI;}
                 }
@@ -91,7 +91,7 @@ public class pequenoSentinela : MonoBehaviour
             break;
 
             case "walk":
-                if(grd){
+                if(ground){
                     if(aspd < spdM*dir){aspd+=spdI;}
                     else{aspd-=spdI;}
                 }
