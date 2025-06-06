@@ -49,6 +49,7 @@ public class player : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update(){
@@ -194,14 +195,16 @@ public class player : MonoBehaviour
             var item = coll.gameObject.GetComponent<habilityItem>();
             if (item != null)
             {
+                
                 lumi_golpes managerScript = habilityManager.GetComponent<lumi_golpes>();
 
                 if (managerScript != null)
                 {
-                    //managerScript.hAdd = item.nome;
-                    
+                    managerScript.hAdd = item.nome;
 
-                    if(hAdd != "" && aHability < habilities.Length){
+
+                    if (hAdd != "" && aHability < habilities.Length)
+                    {
                         habilities[aHability] = hAdd;
                         aHability++;
                         hAdd = "";

@@ -26,7 +26,6 @@ public class pequenoSentinela : MonoBehaviour
     public float dmgTimer;
     public float dTmax;
 
-    public bool ground;
 
     public Rigidbody2D rig;
     public SpriteRenderer sr;
@@ -34,6 +33,7 @@ public class pequenoSentinela : MonoBehaviour
 
     public LayerMask gl;
     public Transform groundCheck;
+    public Transform visionPoint;    
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,81 +45,113 @@ public class pequenoSentinela : MonoBehaviour
 
     void Update()
     {
-        var grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
+        var ground = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
         playerDist = Vector2.Distance(transform.position, player.position);
 
 
-        if(playerDist < dd && state == "walk"){
-            state = "oooh";
+        if (playerDist < dd && state == "walk")
+        {
+            Vector2 directionToPlayer = (player.position - visionPoint.position).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(visionPoint.position, directionToPlayer, dd);
+
+            Debug.DrawRay(visionPoint.position, directionToPlayer * dd, Color.red); // ajuda na depuração
+
+            if (hit.collider != null && hit.collider.gameObject == PlayerObject)
+            {
+                state = "oooh";
+
+                if (player.transform.position.x > transform.position.x)
+                {
+                    dir = 1;
+                }
+                else
+                {
+                    dir = -1;
+                }
+            }
         }
 
-        if(dir < 0){sr.flipX = false;
-        }else{sr.flipX = true;}
+        if (dir < 0)
+            { sr.flipX = false;
+            }
+            else { sr.flipX = true; }
 
         if(ooohTime > 0 && state == "oooh"){
             ooohTime -= 0.1f;
         }
 
 
-        if(player.transform.position.x > transform.position.x){
-            dir = 1;
-        }else{
-            dir = -1;
-        }
-
-       
-
         
 
-        switch(state){
+
+
+    
+
+
+
+
+
+
+
+
+        switch (state)
+        {
             case "chase":
                 dmgTimer = 0;
-                
-                if(ground){
-                    if(aspd < spdM*dir*1.2f){aspd+=spdI;}
-                    else{aspd-=spdI;}
+
+                if (ground)
+                {
+                    if (aspd < spdM * dir * 1.2f) { aspd += spdI; }
+                    else { aspd -= spdI; }
                 }
 
                 rig.linearVelocity = new Vector2(aspd, rig.linearVelocity.y);
-                
+
 
                 anim.SetInteger("transition", 3);
                 oh = false;
-                if(playerDist > lstD){
+                if (playerDist > lstD)
+                {
                     state = "walk";
                 }
-            break;
+                break;
 
             case "walk":
-                if(ground){
-                    if(aspd < spdM*dir){aspd+=spdI;}
-                    else{aspd-=spdI;}
+                if (ground)
+                {
+                    if (aspd < spdM * dir) { aspd += spdI; }
+                    else { aspd -= spdI; }
                 }
                 rig.linearVelocity = new Vector2(aspd, rig.linearVelocity.y);
                 anim.SetInteger("transition", 1);
-            break;
+                break;
 
             case "oooh":
                 anim.SetInteger("transition", 2);
-                if(ooohTime <= 0){
-                    if(oh){
-                        state = "chase";              
-                    }else{
+                if (ooohTime <= 0)
+                {
+                    if (oh)
+                    {
+                        state = "chase";
+                    }
+                    else
+                    {
                         ooohTime = ooohTimeMax;
                         oh = true;
                     }
                 }
-            break;
+                break;
 
             case "damage":
                 life--;
-                rig.linearVelocity = new Vector2(dmgspd*dir, jmpF);
-                if(dmgTimer == 0){dmgTimer = dTmax;}
+                rig.linearVelocity = new Vector2(dmgspd * dir, jmpF);
+                if (dmgTimer == 0) { dmgTimer = dTmax; }
                 dmgTimer--;
-                if(dmgTimer <= 1){
+                if (dmgTimer <= 1)
+                {
                     state = "chase";
                 }
-            break;
+                break;
         }
 
     }
@@ -129,7 +161,7 @@ public class pequenoSentinela : MonoBehaviour
             dir = dir * -1;
         }
 
-        if(coll.gameObject.tag == "ground")
+        if (coll.gameObject.tag == "ground")
 
         if(coll.gameObject.tag == "dmgEnemy"){
             state = "damage";
