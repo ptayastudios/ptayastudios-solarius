@@ -38,10 +38,18 @@ public class pequenoSentinela : MonoBehaviour
     public float maxDmgTimer;
     public float dmgspd;
     public bool dmgTrg;
+    public float deadTimer;
+    public float maxDeadTimer;
+    public bool deadTrg;
+
+
 
     public Rigidbody2D rig;
     public SpriteRenderer sr;
     public Animator anim;
+    public Collider2D colider;
+
+
 
     public LayerMask gl;
     public Transform groundCheck;
@@ -57,6 +65,9 @@ public class pequenoSentinela : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         rig = GetComponent<Rigidbody2D>();
+        colider = GetComponent<CapsuleCollider2D>();
+
+
         PlayerObject = GameObject.Find("lumi");
         player = PlayerObject.transform;
         
@@ -71,7 +82,6 @@ public class pequenoSentinela : MonoBehaviour
         Vector2 directionToPlayer = (player.position - visionPoint.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(visionPoint.position, directionToPlayer, dd);
 
-
         Vector2 distanceToPlayer = (player.position - visionPoint.position).normalized;
         RaycastHit2D hit2 = Physics2D.Raycast(visionPoint.position, distanceToPlayer, playerDist);
 
@@ -84,7 +94,7 @@ public class pequenoSentinela : MonoBehaviour
 
 
 
-        if (playerDist < dd && state == "walk")
+        if (playerDist < dd && state == "walk" && !dead)
         {
             if (hit.collider != null && hit.collider.gameObject == PlayerObject)
             {
@@ -112,24 +122,19 @@ public class pequenoSentinela : MonoBehaviour
 
 
 
-        if (ooohTime > 0 && state == "oooh")
+        if (ooohTime > 0 && !dead && state == "oooh")
         {
             ooohTime -= 0.1f;
         }
         
         
+        if(dmgTimer > 0){ dmgTimer--; }
 
-        if (acDmg != 0)
-        {
-            life -= acDmg;
-            acDmg == 0;
-            dmgTimer = maxDmgTimer;
-        }
-        
+        if (life <= 0) { state = "die"; }
 
 
 
-    
+
 
 
 
@@ -141,27 +146,7 @@ public class pequenoSentinela : MonoBehaviour
         switch (state)
         {
             case "chase":
-                chase();    
-            break;
-
-            case "walk":
-                walk();
-                break;
-
-            case "oooh":
-                ooh();    
-            break;
-
-            case "damage":
-                damage_();    
-            break;
-        }
-
-    }
-
-
-    void chase(){
-        dmgTrg = true;
+                dmgTrg = true;
                 dmgTimer = 0;
 
                 if (ground)
@@ -188,71 +173,104 @@ public class pequenoSentinela : MonoBehaviour
                     state = "walk";
                 }
 
-                if (player.transform.position.x > transform.position.x){
+                if (player.transform.position.x > transform.position.x)
+                {
                     dir = 1;
-                }else{dir = -1;}
+                }
+                else { dir = -1; }
+                break;
+
+            case "walk":
+                lightScript.color = new Color(1f, 0.5f, 0f);
+                dmgTrg = true;
+                if (ground)
+                {
+                    if (aspd < spdM * dir) { aspd += spdI; }
+                    else { aspd -= spdI; }
+                }
+                rig.linearVelocity = new Vector2(aspd, rig.linearVelocity.y);
+                anim.SetInteger("transition", 1);
+                break;
+
+            case "oooh":
+                lightScript.color = new Color(1f, 0.3f, 0f);
+                dmgTrg = true;
+                anim.SetInteger("transition", 2);
+                if (ooohTime <= 0)
+                {
+                    if (oh)
+                    {
+                        state = "chase";
+                    }
+                    else
+                    {
+                        ooohTime = ooohTimeMax;
+                        oh = true;
+                    }
+                }
+                break;
+
+            case "damage":
+
+
+                if (dmgTimer == 0 && dmgTrg == true) { dmgTimer = maxDmgTimer; }
+
+                if (dmgTrg == true)
+                {
+                    life -= acDmg;
+                    dmgTrg = false;
+                }
+
+                if (dmgTimer <= 0)
+                {
+                    lightScript.color = new Color(1f, 0f, 0f);
+
+
+
+
+                    if (acDmg != 0)
+                    {
+                        acDmg = 0;
+                        dmgTimer = maxDmgTimer;
+                    }
+
+
+
+                    dmgTimer--;
+                    if (dmgTimer <= 1 && ground && !dmgTrg)
+                    {
+                        if (playerDist > lstD)
+                        {
+                            state = "walk";
+                        }
+                        else
+                        {
+                            state = "chase";
+                        }
+                    }
+
+
+                    UpdateLifeBar();
+                }
+                else
+                {
+                    lightScript.color = new Color(0f, 0f, 1f);
+                    rig.linearVelocity = new Vector2(dmgspd * -dir, jmpF);
+                }
+                break;
+
+            case "die":
+                lightScript.color = new Color(0f, 0f, 0f);
+                dead = true;
+                anim.SetInteger("transition", 4);
+
+                if (deadTimer < 0) { rig.linearVelocity = new Vector2(dmgspd * -dir, jmpF); }
+                if(deadTimer > 0){ deadTimer--; }
+
+            break;
+        }
+
     }
-
-    void walk(){
-        ightScript.color = new Color(1f, 0.5f, 0f);
-        dmgTrg = true;
-        if (ground)
-        {
-            if (aspd < spdM * dir) { aspd += spdI; }
-            else { aspd -= spdI; }
-        }
-        rig.linearVelocity = new Vector2(aspd, rig.linearVelocity.y);
-        anim.SetInteger("transition", 1);
-    }
-
-    void ooh(){
-        lightScript.color = new Color(1f, 0.3f, 0f);
-        dmgTrg = true;
-        anim.SetInteger("transition", 2);
-        if (ooohTime <= 0)
-        {
-            if (oh)
-            {
-                state = "chase";
-            }
-            else
-            {
-                ooohTime = ooohTimeMax;
-                oh = true;
-            }
-        }
-    }
-
-    void damage_(){
-        if (dmgTimer == 0 && dmgTrg == true) { dmgTimer = maxDmgTimer; }
-        if (dmgTrg == true)
-        {
-            life--;
-            dmgTrg = false;
-        }
-        
-        if (dmgTimer > 0)
-        {
-            rig.linearVelocity = new Vector2(dmgspd * -dir, jmpF);
-        }
-
-        
-
-        dmgTimer--;
-        if (dmgTimer <= 1 && ground && !dmgTrg)
-        {
-            if (playerDist > lstD){
-                state = "walk";
-            }else{
-                state = "chase";
-            }
-        }
-
-
-        UpdateLifeBar();
-    }
-
-
 
 
     void UpdateLifeBar()
@@ -266,15 +284,15 @@ public class pequenoSentinela : MonoBehaviour
 
 
 
-
-
-
-
-
-
     void OnCollisionEnter2D(Collision2D coll){
-        if(coll.gameObject.tag == "wall"){
+        if (coll.gameObject.tag == "wall")
+        {
             dir = dir * -1;
+
+            if (dead)
+            {
+                colider.isTrigger = true;
+            }
         }
 
         if (coll.gameObject.tag == "ground")
@@ -288,8 +306,13 @@ public class pequenoSentinela : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D coll){
-        if(coll.gameObject.tag == "dmgEnemy"){
+        if (coll.gameObject.tag == "dmgEnemy")
+        {
             state = "damage";
+            
+
+            dmg dmgS = coll.gameObject.GetComponent<dmg>();
+            acDmg = dmgS.damageVaule;
         }
     }
 }

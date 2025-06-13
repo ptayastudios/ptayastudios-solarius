@@ -44,7 +44,7 @@ public class player : MonoBehaviour
 
 
 
-    public Physics2D grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
+    public bool grd;
     
     
 
@@ -58,6 +58,7 @@ public class player : MonoBehaviour
     }
 
     void Update(){
+        grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
         mov = Input.GetAxisRaw("Horizontal");
         rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
 

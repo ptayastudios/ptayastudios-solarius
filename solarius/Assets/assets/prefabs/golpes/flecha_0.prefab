@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3232401636246733963}
   - component: {fileID: 6115223407733826605}
   - component: {fileID: -7982446254029822599}
+  - component: {fileID: 8737561334552346205}
   m_Layer: 0
   m_Name: flecha_0
   m_TagString: dmgEnemy
@@ -186,3 +187,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072f89226340e644f8764f9dcee2ba8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 0
+--- !u!114 &8737561334552346205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010560370332213187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd55e35a0fb829141addb3b431451f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageVaule: 10
