@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class arrow : MonoBehaviour
 {
-
+    public float dmg;
 
     void Start()
     {
