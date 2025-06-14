@@ -37,7 +37,7 @@ public class pequenoSentinela : MonoBehaviour
     public LayerMask gl;
     public Transform groundCheck;
     public Transform visionPoint;
-    public GameObject light;
+    public GameObject light_;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -121,7 +121,7 @@ public class pequenoSentinela : MonoBehaviour
                 }
                 Light2D lightScript = GetComponent<Light2D>();
 
-                lightScript.color = new Color(1f, 0f, 0f);
+                light_.lightScript.color = new Color(1f, 0f, 0f);
                 break;
 
             case "walk":
