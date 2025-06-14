@@ -5,6 +5,7 @@ public class punch : MonoBehaviour
     public float time;
     public float spd;
     public float capazMan;
+    public float dmg;
     void Start()
     {
         Destroy(gameObject, 0.6875f);
