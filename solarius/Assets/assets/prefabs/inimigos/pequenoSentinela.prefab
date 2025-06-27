@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1533021711431857788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165681298412284668}
+  m_Layer: 0
+  m_Name: visionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1165681298412284668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533021711431857788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1897, y: -0.1277, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6315823409581609026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2554346857408932557
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +79,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.636
-  m_Color: {r: 1, g: 0.8696006, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.49045774, b: 0, a: 1}
   m_Intensity: 2.41
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -122,6 +153,7 @@ Transform:
   - {fileID: 4456445630449551519}
   - {fileID: 8724809114460169079}
   - {fileID: 8960239602563991574}
+  - {fileID: 1165681298412284668}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5917425655348774116
@@ -290,8 +322,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 4456445630449551519}
-  visionPoint: {fileID: 8724809114460169079}
-  visionObject: {fileID: 7955399854509150749}
+  visionPoint: {fileID: 1165681298412284668}
+  visionObject: {fileID: 1533021711431857788}
   light_: {fileID: 2554346857408932557}
   ground: 0
 --- !u!95 &8190721740769515894

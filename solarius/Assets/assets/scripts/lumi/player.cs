@@ -51,6 +51,7 @@ public class player : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("teste");
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -205,7 +206,7 @@ public class player : MonoBehaviour
 
                 if (managerScript != null)
                 {
-                    managerScript.hAdd = item.nome;
+                    managerScript.hAdd = item.name_;
 
 
                     if (hAdd != "" && aHability < habilities.Length)

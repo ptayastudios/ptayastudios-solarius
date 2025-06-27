@@ -54,15 +54,23 @@ public class lumi_golpes : MonoBehaviour
     public string hAdd;
 
 
+
+
+
+
+    public static lumi_golpes Instance;
+
+/*
     private Dictionary<KeyCode, int> teclaParaHabilidade = new Dictionary<KeyCode, int>()
     {
         { KeyCode.I, 1 },
         { KeyCode.O, 2 },
         { KeyCode.P, 3 }
-    };
+    };*/
 
-    void Start(){
-
+    private void Awake()
+    {
+        Instance = this;
     }
 
 
@@ -108,61 +116,69 @@ public class lumi_golpes : MonoBehaviour
                 }
             }
         }
-        
-        
 
-    
-        
-        if(fire == 0){
-            if(Input.GetButtonDown("Fire1")){
+
+
+
+
+        if (fire == 0)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
                 fire = slots[0];
-                if(fire == 3){bowButton = "Fire1";}
+                if (fire == 3) { bowButton = "Fire1"; }
             }
-            if(Input.GetButtonDown("Fire2")){
+            if (Input.GetButtonDown("Fire2"))
+            {
                 fire = slots[1];
-                if(fire == 3){bowButton = "Fire2";}
+                if (fire == 3) { bowButton = "Fire2"; }
             }
-            if(Input.GetButtonDown("Fire3")){
+            if (Input.GetButtonDown("Fire3"))
+            {
                 fire = slots[2];
-                if(fire == 3){bowButton = "Fire3";}
+                if (fire == 3) { bowButton = "Fire3"; }
             }
         }
-        
 
 
-        switch(fire){
+
+        switch (fire)
+        {
             case 1:
-                if(cnShtSoco){
+                if (cnShtSoco)
+                {
                     Instantiate(punch, shtPoint.transform.position, this.gameObject.transform.rotation);
                     cldwSoco = cldwSocoDflt;
                     cnShtSoco = false;
                     fire = 0;
                 }
-            break;
+                break;
 
             case 2:
-                if(cnShtCorte){
+                if (cnShtCorte)
+                {
                     Instantiate(corte, shtPoint.transform.position, this.gameObject.transform.rotation);
                     cldwCorte = cldwSocoDflt;
                     cnShtCorte = false;
                     fire = 0;
                 }
-            break;
+                break;
 
             case 3:
-                anim.SetInteger("transition",2);
+                anim.SetInteger("transition", 2);
                 hold = false;
-                if(Input.GetButtonUp(bowButton)){
+                if (Input.GetButtonUp(bowButton))
+                {
                     anim.SetInteger("transition", 3);
                     GameObject arw = Instantiate(arrow, shtPoint.position, this.gameObject.transform.rotation);
                     Vector2 baseDir = new Vector2(1, -1).normalized;
                     Vector2 dir_ = shtPoint.rotation * baseDir;
                     Rigidbody2D rb = arw.GetComponent<Rigidbody2D>();
                     rb.AddForce(dir_ * arrowF, ForceMode2D.Impulse);
-                    arw.transform.Rotate(0, 0, -45); 
+                    arw.transform.Rotate(0, 0, -45);
                     fire = 0;
                 }
-            break;
+                break;
 
         }
 
@@ -170,17 +186,21 @@ public class lumi_golpes : MonoBehaviour
 
 
 
-        if(cldwSoco > 0){
+        if (cldwSoco > 0)
+        {
             cldwSoco--;
         }
-        if(cldwSoco == 0){
+        if (cldwSoco == 0)
+        {
             cnShtSoco = true;
         }
 
-        if(cldwCorte > 0){
+        if (cldwCorte > 0)
+        {
             cldwCorte--;
         }
-        if(cldwCorte == 0){
+        if (cldwCorte == 0)
+        {
             cnShtCorte = true;
         }
 
@@ -189,11 +209,35 @@ public class lumi_golpes : MonoBehaviour
 
 
 
-        if(hAdd != "" && aHability < habilities.Length){
+        if (hAdd != "" && aHability < habilities.Length)
+        {
             habilities[aHability] = hAdd;
             aHability++;
             hAdd = "";
         }
     }
 
+    public void HabilitySet(int index, int name_)
+    {
+        slots[index] = name_;
+        Debug.Log($"Slot {index} definido com: {name_}");
+    }
+
 }
+
+
+
+
+
+/*
+
+---hability index---
+
+- 1 - punch
+- 2 - simple attack
+- 3 - bow
+
+
+
+
+*/
