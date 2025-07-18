@@ -154,8 +154,8 @@ public class player : MonoBehaviour
     }
 
     
-        if(dir > 0){sr.flipX = false;
-        }else{sr.flipX = true;}
+        if(dir > 0){anim.SetBool("isR", true);
+        }else{anim.SetBool("isR", false);}
 
 
 
