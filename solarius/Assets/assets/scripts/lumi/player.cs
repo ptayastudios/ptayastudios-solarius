@@ -14,8 +14,11 @@ public class player : MonoBehaviour
     public float jmpM;
     public float jmpMf;
     public bool airJmp;
-    public bool airJmpMov;
     public float airJmpMovM;
+    public float airJumpTime;
+    public float airJumpTimeMax;
+
+    public string state;
 
     //objetos
     public LayerMask gl;
@@ -60,17 +63,48 @@ public class player : MonoBehaviour
 
     void Update(){
         grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
-        mov = Input.GetAxisRaw("Horizontal");
+        
         rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
 
-        if (Input.GetButtonDown("Jump") && jmps > 0)
-        {
-            jump();
+        Vector3 mouse = Input.mousePosition;
+        mouse = Camera.main.ScreenToWorldPoint(mouse);
+        Vector2 Mdir = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);
+
+
+
+        
+        
+        if(state != "airJmp"){
+           mov = Input.GetAxisRaw("Horizontal"); 
+        }
+        
+
+        if (mov == 0){
+            state = "idle";
+        }else { state = "walk"; }
+
+
+        if (Input.GetButtonDown("Jump") && jmps > 0){
+            state = "jump";
+        }
+        
+
+        if (airJmp){
+            state = "airjump";
         }
 
-        if (airJmp)
+        var trigger = false;
+        if (airJmp){
+            trigger = true;
+        }
+        if (trigger){
+            airJumpTime = airJumpTimeMax;
+            trigger = false;
+        }
+        if (airJumpTime > 0)
         {
-            airJump();
+            airJumpTime -= 0.1f;
+            state = "airjump";
         }
 
 
@@ -80,10 +114,7 @@ public class player : MonoBehaviour
 
 
 
-
-
-        if (grd) { jmps = 2; }
-
+            if (grd) { jmps = 2; }
 
         if (airJmp && jmpM < 1) {
             jmpM += jmpMf;
@@ -92,16 +123,6 @@ public class player : MonoBehaviour
         if (jmpM >= 1) {
             airJmp = false;
             jmpM = 0;
-            airJmpMov = false;
-        }
-
-
-
-
-        if (mov < 0) {
-            dir = -1;
-        } else if (mov > 0) {
-            dir = 1;
         }
 
 
@@ -111,83 +132,53 @@ public class player : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-        if (grd || ground)
+        switch (state)
         {
-            if (mov != 0)
-            {
-                anim.SetInteger("transition", 2);
-            }
-            else
-            {
+            case "idle":
                 anim.SetInteger("transition", 1);
-            }
+                break;
 
-        }
-        else
-        {
-            if (!airJmp)
-            {
-                if (rig.linearVelocity.y > 0)
-                {
-                    anim.SetInteger("transition", 3);
+            case "walk":
+                anim.SetInteger("transition", 2);
+                break;
+
+            case "jump":
+
+                if (jmps == 2) {
+                    rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF);
                 }
-                else
-                {
+                else {
+                    rig.linearVelocity = new Vector2(rig.linearVelocity.x, 0);
+                    jmps--;
+                    airJmp = true;
+                }
+
+
+
+                if (rig.linearVelocity.y > 0){
+                    anim.SetInteger("transition", 3);
+                }else{
                     anim.SetInteger("transition", 4);
                 }
-            }
-            else
-            {
-                if (airJmpMov)
-                {
-                    anim.SetInteger("transition", 6);
-                }
-                else
-                {
-                    anim.SetInteger("transition", 5);
-                }
-            }
+
+                break;
+
+            case "airjump":
+
+                Vector2 dash = Mdir.normalized * airJmpMovM;
+                rig.linearVelocity = new Vector2(dash.x, dash.y);
+
+                break;
+        }
+
+
+
+
+
+        if (mouse.x > 0){anim.SetBool("isR", true);}
+        else { anim.SetBool("isR", false); }
+
     }
-
-    
-        if(dir > 0){anim.SetBool("isR", true);
-        }else{anim.SetBool("isR", false);}
-
-
-
-        
-            
-    }
-
-    void jump(){
-            if (jmps == 2){
-                rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF);
-            }
-            else{
-                if (mov != 0) { airJmpMov = true; }
-                rig.linearVelocity = new Vector2(rig.linearVelocity.x, 0);
-                jmps--;
-                airJmp = true;
-            }
-    }    
-
-    void airJump(){
-        if (airJmpMov){
-                rig.linearVelocity = new Vector2(dir * airJmpMovM, jmpF * jmpM / 2);
-            }
-            else{
-                rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF * jmpM);
-            }
-    }
-
-
 
     void OnCollisionEnter2D(Collision2D coll)
     {

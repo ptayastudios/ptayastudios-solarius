@@ -60,6 +60,9 @@ public class pequenoSentinela : MonoBehaviour
     public GameObject light_;
 
 
+    public GameObject dmgObj;
+
+
 
     public bool ground;
 
@@ -264,6 +267,18 @@ public class pequenoSentinela : MonoBehaviour
                 }
                 break;
 
+            case "knockback":
+
+                Vector2 knockbackObj = new Vector3(dmgObj.x, dmgObj.y);
+
+                Vector2 dmgDir = new Vector2(knockbackObj.x - transform.position.x, knockbackObj.y - transform.position.y);
+
+                
+                Vector2 knockback = dmgDir.normalized * 5;
+                rig.linearVelocity = new Vector2(knockback.x * -1, knockback.y * -1);
+
+                break;
+
             case "die":
                 lightScript.color = new Color(0f, 0f, 0f);
                 dead = true;
@@ -308,6 +323,11 @@ public class pequenoSentinela : MonoBehaviour
             dmg dmgS = coll.gameObject.GetComponent<dmg>();
             acDmg = dmgS.damageVaule;
         }
+
+        if (coll.gameObject.tag == "explode")
+        {
+            dmgObj = coll.gameObject;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D coll){
@@ -321,3 +341,19 @@ public class pequenoSentinela : MonoBehaviour
         }
     }
 }
+
+
+/*
+    no estado de knockback, termina de configurar alguma forma de o objeto inimigo
+    conseguir as informações de x e y pertencentes ao objeto da colisão com tag explosão
+    e veja se o inimigo é arremessado no sentido oposto ao centro da explosão;
+
+
+
+
+
+
+
+
+
+*/
