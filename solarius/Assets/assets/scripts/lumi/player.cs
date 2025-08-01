@@ -78,7 +78,10 @@ public class player : MonoBehaviour
 
 
 
- 
+
+
+
+
         if (grd) { jmps = 2; }
 
 

@@ -9,6 +9,8 @@ public class lumi_golpes : MonoBehaviour
     public float angle;
     public int Dir;
     public Animator anim;
+    public Transform lumiTransform;
+    public GameObject lumiObj;
 
 
 
@@ -43,6 +45,16 @@ public class lumi_golpes : MonoBehaviour
     public string bowButton;
     public GameObject arrow;
     public float arrowF;
+
+
+
+
+    /////////////////explosao/////////////////
+    public GameObject explosion;
+
+
+
+
 
 
     public string[] habilities = new string[16];
@@ -118,7 +130,10 @@ public class lumi_golpes : MonoBehaviour
         }
 
 
-
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Instantiate(explosion, lumiTransform.transform.position, this.gameObject.transform.rotation);
+        }
 
 
         if (fire == 0)
