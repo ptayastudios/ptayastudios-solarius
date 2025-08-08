@@ -29,7 +29,10 @@ public class pequenoSentinela : MonoBehaviour
     public Transform lifeBar;
     public Vector3 initialScale;
     public float acDmg;
-
+    public bool cnKncb;
+    public bool knbTrigger;
+    public float knbTimer;
+    public float knbMax;
 
 
 
@@ -76,7 +79,7 @@ public class pequenoSentinela : MonoBehaviour
 
         PlayerObject = GameObject.Find("lumi");
         player = PlayerObject.transform;
-        
+
     }
 
     void Update()
@@ -84,7 +87,7 @@ public class pequenoSentinela : MonoBehaviour
         Light2D lightScript = light_.GetComponent<Light2D>();
         ground = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
         playerDist = Vector2.Distance(transform.position, player.position);
-        
+
         Vector2 directionToPlayer = (player.position - visionPoint.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(visionPoint.position, directionToPlayer, dd);
 
@@ -95,7 +98,7 @@ public class pequenoSentinela : MonoBehaviour
         Debug.DrawRay(visionPoint.position, distanceToPlayer * playerDist, Color.yellow);
 
 
-        visionObject.transform.position = new Vector3(transform.position.x+0.1f * dir, transform.position.y, 0f);
+        visionObject.transform.position = new Vector3(transform.position.x + 0.1f * dir, transform.position.y, 0f);
 
 
 
@@ -128,13 +131,17 @@ public class pequenoSentinela : MonoBehaviour
 
 
 
+        
+
+
+
         if (ooohTime > 0 && !dead && state == "oooh")
         {
             ooohTime -= 0.1f;
         }
-        
-        
-        if(dmgTimer > 0){ dmgTimer--; }
+
+
+        if (dmgTimer > 0) { dmgTimer--; }
 
         if (life <= 0) { state = "die"; }
 
@@ -234,8 +241,6 @@ public class pequenoSentinela : MonoBehaviour
                     lightScript.color = new Color(1f, 0f, 0f);
 
 
-
-
                     if (acDmg != 0)
                     {
                         acDmg = 0;
@@ -265,19 +270,22 @@ public class pequenoSentinela : MonoBehaviour
                     lightScript.color = new Color(0f, 0f, 1f);
                     rig.linearVelocity = new Vector2(dmgspd * -dir, jmpF);
                 }
+
+                if (dmgObj != null && cnKncb)
+                {
+                    Vector2 knockbackObj = new Vector2(dmgObj.transform.position.x, dmgObj.transform.position.y);
+
+                    Vector2 dmgDir = new Vector2(knockbackObj.x - transform.position.x, knockbackObj.y - transform.position.y);
+
+
+                    Vector2 knockback = dmgDir.normalized * 5;
+                    rig.linearVelocity = new Vector2(knockback.x * -1, knockback.y * -1);
+                    //rig.AddForce(knockback, ForceMode2D.Impulse);
+                }
+
                 break;
 
-            case "knockback":
 
-                Vector2 knockbackObj = new Vector3(dmgObj.x, dmgObj.y);
-
-                Vector2 dmgDir = new Vector2(knockbackObj.x - transform.position.x, knockbackObj.y - transform.position.y);
-
-                
-                Vector2 knockback = dmgDir.normalized * 5;
-                rig.linearVelocity = new Vector2(knockback.x * -1, knockback.y * -1);
-
-                break;
 
             case "die":
                 lightScript.color = new Color(0f, 0f, 0f);
@@ -285,9 +293,9 @@ public class pequenoSentinela : MonoBehaviour
                 anim.SetInteger("transition", 4);
 
                 if (deadTimer < 0) { rig.linearVelocity = new Vector2(dmgspd * -dir, jmpF); }
-                if(deadTimer > 0){ deadTimer--; }
+                if (deadTimer > 0) { deadTimer--; }
 
-            break;
+                break;
         }
 
     }
@@ -304,7 +312,8 @@ public class pequenoSentinela : MonoBehaviour
 
 
 
-    void OnCollisionEnter2D(Collision2D coll){
+    void OnCollisionEnter2D(Collision2D coll)
+    {
         if (coll.gameObject.tag == "wall")
         {
             dir = dir * -1;
@@ -317,29 +326,39 @@ public class pequenoSentinela : MonoBehaviour
 
         if (coll.gameObject.tag == "ground")
 
-        if(coll.gameObject.tag == "dmgEnemy"){
-            state = "damage";
+            if (coll.gameObject.tag == "dmgEnemy")
+            {
+                state = "damage";
 
-            dmg dmgS = coll.gameObject.GetComponent<dmg>();
-            acDmg = dmgS.damageVaule;
-        }
+                dmg dmgS = coll.gameObject.GetComponent<dmg>();
+                acDmg = dmgS.damageVaule;
+            }
 
-        if (coll.gameObject.tag == "explode")
-        {
-            dmgObj = coll.gameObject;
-        }
+
     }
 
-    void OnTriggerEnter2D(Collider2D coll){
+    void OnTriggerEnter2D(Collider2D coll)
+    {
         if (coll.gameObject.tag == "dmgEnemy")
         {
             state = "damage";
-            
+
+
+            dmg dmgS = coll.gameObject.GetComponent<dmg>();
+            acDmg = dmgS.damageVaule;
+        }
+        if (coll.gameObject.tag == "explode")
+        {
+            dmgObj = coll.gameObject;
+            state = "damage";
+            cnKncb = true;
 
             dmg dmgS = coll.gameObject.GetComponent<dmg>();
             acDmg = dmgS.damageVaule;
         }
     }
+    
+   
 }
 
 
