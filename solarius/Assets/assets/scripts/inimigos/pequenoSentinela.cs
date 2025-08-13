@@ -131,7 +131,7 @@ public class pequenoSentinela : MonoBehaviour
 
 
 
-        
+
 
 
 
@@ -356,7 +356,18 @@ public class pequenoSentinela : MonoBehaviour
             dmg dmgS = coll.gameObject.GetComponent<dmg>();
             acDmg = dmgS.damageVaule;
         }
+        if (coll.gameObject.tag == "wall")
+        {
+            dir = dir * -1;
+
+            if (dead)
+            {
+                colider.isTrigger = true;
+            }
+        }
     }
+    
+    
     
    
 }
