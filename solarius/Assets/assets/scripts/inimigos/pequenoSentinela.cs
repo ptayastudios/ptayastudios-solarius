@@ -374,11 +374,7 @@ public class pequenoSentinela : MonoBehaviour
 
 
 /*
-    no estado de knockback, termina de configurar alguma forma de o objeto inimigo
-    conseguir as informações de x e y pertencentes ao objeto da colisão com tag explosão
-    e veja se o inimigo é arremessado no sentido oposto ao centro da explosão;
-
-
+   
 
 
 

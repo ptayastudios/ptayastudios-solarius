@@ -44,6 +44,7 @@ public class player : MonoBehaviour
     public int fire;
 
     public string hAdd;
+    public Transform Mira;
 
 
 
@@ -68,36 +69,43 @@ public class player : MonoBehaviour
 
         Vector3 mouse = Input.mousePosition;
         mouse = Camera.main.ScreenToWorldPoint(mouse);
-        Vector2 Mdir = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);
+        Vector2 Mdir = new Vector2(Mira.position.x - transform.position.x, Mira.position.y - transform.position.y);
 
 
-
+       
         
-        
-        if(state != "airJmp"){
-           mov = Input.GetAxisRaw("Horizontal"); 
+
+        if (state != "airJmp")
+        {
+            mov = Input.GetAxisRaw("Horizontal");
         }
-        
 
-        if (mov == 0){
+
+        if (mov == 0)
+        {
             state = "idle";
-        }else { state = "walk"; }
+        }
+        else { state = "walk"; }
 
 
-        if (Input.GetButtonDown("Jump") && jmps > 0){
+        if (Input.GetButtonDown("Jump") && jmps > 0)
+        {
             state = "jump";
         }
-        
 
-        if (airJmp){
+
+        if (airJmp)
+        {
             state = "airjump";
         }
 
         var trigger = false;
-        if (airJmp){
+        if (airJmp)
+        {
             trigger = true;
         }
-        if (trigger){
+        if (trigger)
+        {
             airJumpTime = airJumpTimeMax;
             trigger = false;
         }
@@ -114,13 +122,15 @@ public class player : MonoBehaviour
 
 
 
-            if (grd) { jmps = 2; }
+        if (grd) { jmps = 2; }
 
-        if (airJmp && jmpM < 1) {
+        if (airJmp && jmpM < 1)
+        {
             jmpM += jmpMf;
         }
 
-        if (jmpM >= 1) {
+        if (jmpM >= 1)
+        {
             airJmp = false;
             jmpM = 0;
         }
@@ -144,10 +154,12 @@ public class player : MonoBehaviour
 
             case "jump":
 
-                if (jmps == 2) {
+                if (jmps == 2)
+                {
                     rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF);
                 }
-                else {
+                else
+                {
                     rig.linearVelocity = new Vector2(rig.linearVelocity.x, 0);
                     jmps--;
                     airJmp = true;
@@ -155,9 +167,12 @@ public class player : MonoBehaviour
 
 
 
-                if (rig.linearVelocity.y > 0){
+                if (rig.linearVelocity.y > 0)
+                {
                     anim.SetInteger("transition", 3);
-                }else{
+                }
+                else
+                {
                     anim.SetInteger("transition", 4);
                 }
 
@@ -175,22 +190,20 @@ public class player : MonoBehaviour
 
 
 
-        if (mouse.x > 0){anim.SetBool("isR", true);}
+        if (mouse.x > 0) { anim.SetBool("isR", true); }
         else { anim.SetBool("isR", false); }
+    
 
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        
         if (coll.gameObject.tag == "ground")
         {
             jmps = 2;
             ground = true;
-        }
-        
-
-
-        if(coll.gameObject.tag == "hability"){
+        }else if(coll.gameObject.tag == "hability"){
             
             var item = coll.gameObject.GetComponent<habilityItem>();
             if (item != null)

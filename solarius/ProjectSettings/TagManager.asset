@@ -9,6 +9,8 @@ TagManager:
   - dmgEnemy
   - hability
   - explode
+  - regen
+  - enemy
   layers:
   - Default
   - TransparentFX
