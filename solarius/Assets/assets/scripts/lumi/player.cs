@@ -65,7 +65,7 @@ public class player : MonoBehaviour
     void Update(){
         grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
         
-        rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
+        if (state != "knockback"){rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);}
 
         Vector3 mouse = Input.mousePosition;
         mouse = Camera.main.ScreenToWorldPoint(mouse);
