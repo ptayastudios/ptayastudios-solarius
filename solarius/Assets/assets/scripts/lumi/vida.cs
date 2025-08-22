@@ -62,9 +62,9 @@ public class vida : MonoBehaviour
             Vector2 knockback = dmgDir.normalized * knockbackForce;
             rig.linearVelocity = new Vector2(knockback.x * -1, knockback.y * -1);*/
             
-            float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x); // Sinal oposto ao inimigo
-            Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * 0.1f); // Ajuste o 0.5f pra menos vertical se quiser
-            rig.linearVelocity = knockback;
+            float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x); 
+            Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * 0.1f);
+            rig.AddForce(knockback, ForceMode2D.Impulse);
         }   
     }
 
