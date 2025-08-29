@@ -5,6 +5,7 @@ public class player : MonoBehaviour
     //movimento
     public float mov;
     public float spd;
+    public float maxSpd;
     public float jmpF;
     public int jmps;
     public bool slide;
@@ -49,8 +50,13 @@ public class player : MonoBehaviour
 
 
     public bool grd;
+
+
+
     
     
+    public Vector2 externalVelocity;    // guarda knockbacks, empurrões etc.
+    public float externalDecay = 5f;    // taxa de "perda" dessas forças
 
 
     void Start()
@@ -62,12 +68,56 @@ public class player : MonoBehaviour
         
     }
 
+
+    void FixedUpdate()
+    {
+
+        /*alguma coisa ta impedindo dash na horizontal e o knockback na vertical, no geral, o knockback ta com uma fisica boa
+        tirando o fato de que nao funciona na vertical bah*/
+        grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
+
+
+
+        Vector2 lV = rig.linearVelocity;
+
+        // input só mexe no X
+        float inputX = mov * maxSpd;
+
+        // soma input + external no X
+        float finalX = inputX + externalVelocity.x;
+
+        // no ar, corta inércia horizontal se não há input nem external
+        if (!grd && mov == 0 && Mathf.Abs(externalVelocity.x) < 0.1f)
+        {
+            finalX = 0f;
+        }
+
+        // Y agora também recebe external
+        float finalY = lV.y + externalVelocity.y;
+
+        // aplica velocidade resultante
+        rig.linearVelocity = new Vector2(finalX, finalY);
+
+        // decaimento da external
+        externalVelocity = Vector2.MoveTowards(externalVelocity, Vector2.zero, externalDecay * 3f * Time.fixedDeltaTime);
+
+
+    }
+
+
     void Update(){
         grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
 
-        //rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
         
-        //muda a forma de movimentção, a forma atual impede inercia e kanockback na horizontal
+
+
+
+
+
+
+
+
+
 
         Vector3 mouse = Input.mousePosition;
         mouse = Camera.main.ScreenToWorldPoint(mouse);

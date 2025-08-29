@@ -54,17 +54,17 @@ public class vida : MonoBehaviour
             }
             vidas--;
             Debug.Log("Dano sofrido. Vidas restantes: " + vidas);
+
             /*
-            Vector2 knockbackObj = new Vector2(dmgObj.transform.position.x, dmgObj.transform.position.y);
-
-            Vector2 dmgDir = new Vector2(knockbackObj.x - transform.position.x, knockbackObj.y - transform.position.y);
-
-            Vector2 knockback = dmgDir.normalized * knockbackForce;
-            rig.linearVelocity = new Vector2(knockback.x * -1, knockback.y * -1);*/
-            
             float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x); 
             Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * 0.1f);
-            rig.AddForce(knockback, ForceMode2D.Impulse);
+            rig.AddForce(knockback, ForceMode2D.Impulse);*/
+            
+            float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x);
+            Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * 0.1f);
+
+            // pega referência do script de movimento
+            principalScript.externalVelocity += knockback;
         }   
     }
 
