@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 
 public class player : MonoBehaviour
@@ -18,26 +19,22 @@ public class player : MonoBehaviour
     public float airJmpMovM;
     public float airJumpTime;
     public float airJumpTimeMax;
-
     public string state;
+    public bool grd;
+
+
 
     //objetos
     public LayerMask gl;
     public Transform groundCheck;
 
+
+
     //relacionados a habilidades
     public string clctdHability;
     public GameObject habilityManager;
 
-    //componentes
-    public Rigidbody2D rig;
-    public Animator anim;
-    public SpriteRenderer sr;
-
-
-
-
-
+   
     public string[] habilities = new string[16];
     public int aHability = 1;
     public int[] slots = new int[5];
@@ -49,19 +46,23 @@ public class player : MonoBehaviour
 
 
 
-    public bool grd;
+
+     //componentes
+    public Rigidbody2D rig;
+    public Animator anim;
+    public SpriteRenderer sr;
 
 
 
-    
-    
-    public Vector2 externalVelocity;    // guarda knockbacks, empurrões etc.
-    public float externalDecay = 5f;    // taxa de "perda" dessas forças
+
+
+    //dano
+    public float knkTimer;
+    public float knkTimerMax;
 
 
     void Start()
     {
-        Debug.Log("teste");
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -69,102 +70,42 @@ public class player : MonoBehaviour
     }
 
 
-    void FixedUpdate()
-    {
-
-        /*alguma coisa ta impedindo dash na horizontal e o knockback na vertical, no geral, o knockback ta com uma fisica boa
-        tirando o fato de que nao funciona na vertical bah*/
-        grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
-
-
-
-        Vector2 lV = rig.linearVelocity;
-
-        // input só mexe no X
-        float inputX = mov * maxSpd;
-
-        // soma input + external no X
-        float finalX = inputX + externalVelocity.x;
-
-        // no ar, corta inércia horizontal se não há input nem external
-        if (!grd && mov == 0 && Mathf.Abs(externalVelocity.x) < 0.1f)
-        {
-            finalX = 0f;
-        }
-
-        // Y agora também recebe external
-        float finalY = lV.y + externalVelocity.y;
-
-        // aplica velocidade resultante
-        rig.linearVelocity = new Vector2(finalX, finalY);
-
-        // decaimento da external
-        externalVelocity = Vector2.MoveTowards(externalVelocity, Vector2.zero, externalDecay * 3f * Time.fixedDeltaTime);
-
-
-    }
-
-
     void Update(){
-        grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
 
-        
-
-
-
-
-
-
-
-
-
-
-        Vector3 mouse = Input.mousePosition;
-        mouse = Camera.main.ScreenToWorldPoint(mouse);
-        Vector2 Mdir = new Vector2(Mira.position.x - transform.position.x, Mira.position.y - transform.position.y);
-
-
-       
-        
-
-        if (state != "airJmp")
-        {
+        if (state != "knockback"){
+            
+            if (state != "airJmp"){
             mov = Input.GetAxisRaw("Horizontal");
+            }
+
+            if (mov == 0){
+                state = "idle";
+            }
+            else { state = "walk"; }
+
+            if (Input.GetButtonDown("Jump") && jmps > 0)
+            {
+                state = "jump";
+                Debug.Log("imput enviado");
+            }
+
+            if (airJmp)
+            {
+                state = "airjump";
+                airJumpTime = airJumpTimeMax;
+            }   
+        
         }
+        
+        if(Input.GetButtonDown("Jump")){ Debug.Log("imput recebido"); }
 
 
-        if (mov == 0)
-        {
-            state = "idle";
-        }
-        else { state = "walk"; }
 
 
-        if (Input.GetButtonDown("Jump") && jmps > 0)
-        {
-            state = "jump";
-        }
-
-
-        if (airJmp)
+        if (airJumpTime <= 0.1)
         {
             state = "airjump";
-        }
-
-        var trigger = false;
-        if (airJmp)
-        {
-            trigger = true;
-        }
-        if (trigger)
-        {
-            airJumpTime = airJumpTimeMax;
-            trigger = false;
-        }
-        if (airJumpTime > 0)
-        {
-            airJumpTime -= 0.1f;
-            state = "airjump";
+            
         }
 
 
@@ -186,13 +127,28 @@ public class player : MonoBehaviour
             airJmp = false;
             jmpM = 0;
         }
+    
+    }
 
 
 
+    
+    void FixedUpdate()
+    {
+        /*a state machine ta com problema em iniiar o state de pulo, a unity recebe o imput e tenta abrir o state, mas por algum
+        motivo ele nao responde, provavelmente pq tem alguma sobreposição que impede a troca de estados*/
 
 
 
+        if(mov == 0 && state != "airJmp" && state != "knockback")
+        { rig.linearVelocity = new Vector2(0, rig.linearVelocity.y); }
 
+
+
+        grd = Physics2D.OverlapCircle(groundCheck.position, 0.2f, gl);
+        Vector3 mouse = Input.mousePosition;
+        mouse = Camera.main.ScreenToWorldPoint(mouse);
+        Vector2 Mdir = new Vector2(Mira.position.x - transform.position.x, Mira.position.y - transform.position.y);
 
         switch (state)
         {
@@ -200,12 +156,20 @@ public class player : MonoBehaviour
                 anim.SetInteger("transition", 1);
                 break;
 
+
+
+
             case "walk":
                 anim.SetInteger("transition", 2);
+                rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
                 break;
 
-            case "jump":
 
+
+
+            case "jump":
+                Debug.Log("imput usado");
+                rig.linearVelocity = new Vector2(mov * spd, rig.linearVelocity.y);
                 if (jmps == 2)
                 {
                     rig.linearVelocity = new Vector2(rig.linearVelocity.x, jmpF);
@@ -227,26 +191,39 @@ public class player : MonoBehaviour
                 {
                     anim.SetInteger("transition", 4);
                 }
-
                 break;
 
+
+
+
             case "airjump":
+                airJumpTime -= Time.deltaTime;
 
                 Vector2 dash = Mdir.normalized * airJmpMovM;
                 rig.linearVelocity = new Vector2(dash.x, dash.y);
 
+
+                if(airJumpTime <= 0){ state = "idle"; }
+                break;
+
+
+
+
+            case "knockback":
+                knkTimer -= Time.deltaTime;
+
+                if (knkTimer <= 0){ state = "idle"; }
                 break;
         }
 
-
-
-
+        
 
         if (mouse.x > 0) { anim.SetBool("isR", true); }
         else { anim.SetBool("isR", false); }
-    
-
     }
+
+
+
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -255,7 +232,7 @@ public class player : MonoBehaviour
         {
             jmps = 2;
             ground = true;
-        }else if(coll.gameObject.tag == "hability"){
+        }/*else if(coll.gameObject.tag == "hability"){
             
             var item = coll.gameObject.GetComponent<habilityItem>();
             if (item != null)
@@ -276,7 +253,7 @@ public class player : MonoBehaviour
                     }
                 }
             }
-        }
+        }*/
     }
 
     void OnCollisionExit2D(Collision2D coll){

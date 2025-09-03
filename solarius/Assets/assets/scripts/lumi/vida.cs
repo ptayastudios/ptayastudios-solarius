@@ -8,6 +8,7 @@ public class vida : MonoBehaviour
     public GameObject dmgObj;
     public Rigidbody2D rig;
     public float knockbackForce;
+    public float KnockbackForceY;
 
 
     public bool cnTimer;
@@ -37,6 +38,10 @@ public class vida : MonoBehaviour
 
     void dano()
     {
+        
+        /*muda a forma de colisao do player-inimigo e testar*/
+
+
         if (vidas > 0)
         {
             player principalScript = GetComponent<player>();
@@ -55,17 +60,18 @@ public class vida : MonoBehaviour
             vidas--;
             Debug.Log("Dano sofrido. Vidas restantes: " + vidas);
 
-            /*
-            float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x); 
-            Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * 0.1f);
-            rig.AddForce(knockback, ForceMode2D.Impulse);*/
-            
-            float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x);
-            Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * 0.1f);
 
-            // pega referência do script de movimento
-            principalScript.externalVelocity += knockback;
-        }   
+            float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x);
+            float verticalDir = principalScript.ground ? 1f : 0.5f;
+
+            Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * KnockbackForceY * verticalDir);
+            rig.linearVelocity = knockback;
+
+            principalScript.state = "knockback";
+            principalScript.knkTimer = principalScript.knkTimerMax;
+
+
+        }
     }
 
     void regeneração()
@@ -86,7 +92,7 @@ public class vida : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "enemy")
         {
@@ -104,10 +110,3 @@ public class vida : MonoBehaviour
 }
 
 
-/*
-sistema de knockback do player nao funciona.
-o timer funciona mas o player ainda pode se mover livremente durante
-o knockback e nao sai voando
-
-
-*/
