@@ -1,2 +1,2 @@
-o pulo ta saindo so as vezes. 
-o pulo duplo tambem ta nisso, fora que ficou mais curto do nada,
+o pulo ainda ta travando e o dash perdendo intensidade conforme ele é usado, e o pulo duplo ta sendo interpretado
+como pulo e nao como dash. 

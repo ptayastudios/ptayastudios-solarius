@@ -62,7 +62,7 @@ public class vida : MonoBehaviour
 
 
             float horizontalDir = Mathf.Sign(transform.position.x - dmgObj.transform.position.x);
-            float verticalDir = principalScript.ground ? 1f : 0.5f;
+            float verticalDir = principalScript.grd ? 1f : 0.5f;
 
             Vector2 knockback = new Vector2(horizontalDir * knockbackForce, knockbackForce * KnockbackForceY * verticalDir);
             rig.linearVelocity = knockback;
