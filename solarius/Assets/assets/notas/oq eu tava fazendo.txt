@@ -1,3 +1,2 @@
-fiz a alteração da captação do imput de pulo mas nao testei,
-ainda falta colocar os lugares em que jmpPressed é setada 
-como falsa, fora isso é testar e seguir pro proximo passo.
+mecher no sistema de build pra facilitar a criação e implementação de novas habilidades
+criar mais habilidades e excluir as atuais que não vão seguir pra beta
