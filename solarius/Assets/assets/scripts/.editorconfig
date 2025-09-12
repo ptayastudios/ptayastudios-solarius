@@ -1,0 +1,41 @@
+# EditorConfig é suportado pelo VS Code e OmniSharp
+# Coloque este arquivo na raiz do seu repositório
+
+root = true
+
+[*.cs]
+indent_style = space
+indent_size = 4
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+
+# ======= Quebra de linha antes da chave =======
+# "none" = chave na mesma linha
+csharp_new_line_before_open_brace = none
+
+# ======= Estilo de chaves =======
+csharp_prefer_braces = true:warning
+
+# ======= Uso do var =======
+# Para tipos embutidos (int, string, etc.)
+csharp_style_var_for_built_in_types = true:suggestion
+# Para tipos anônimos
+csharp_style_var_when_type_is_apparent = true:suggestion
+# Para quando o tipo não é óbvio
+csharp_style_var_elsewhere = false:suggestion
+
+# ======= Organização de usings =======
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+# ======= Expressões e parênteses =======
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:suggestion
+dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary:suggestion
+dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary:suggestion
+
+# ======= Preferências de estilo =======
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion

@@ -1,0 +1,3 @@
+fiz a alteração da captação do imput de pulo mas nao testei,
+ainda falta colocar os lugares em que jmpPressed é setada 
+como falsa, fora isso é testar e seguir pro proximo passo.

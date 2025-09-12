@@ -1,0 +1,1834 @@
+fileFormatVersion: 2
+guid: 5e57911a52029d6419a0128a924510ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6315418894862379501
+    second: lumi antigo novo_0
+  - first:
+      213: -4277566205663692883
+    second: lumi antigo novo_1
+  - first:
+      213: -5051261221028978400
+    second: lumi antigo novo_2
+  - first:
+      213: 4225625210971399811
+    second: lumi antigo novo_3
+  - first:
+      213: -7525395765425932439
+    second: lumi antigo novo_4
+  - first:
+      213: 5774019962378447915
+    second: lumi antigo novo_5
+  - first:
+      213: -1429791940337605523
+    second: lumi antigo novo_6
+  - first:
+      213: -7319544553626192179
+    second: lumi antigo novo_7
+  - first:
+      213: 2368550410017411136
+    second: lumi antigo novo_8
+  - first:
+      213: 7698746527933145404
+    second: lumi antigo novo_9
+  - first:
+      213: -3921861566607794931
+    second: lumi antigo novo_10
+  - first:
+      213: 1294890261131366292
+    second: lumi antigo novo_11
+  - first:
+      213: -4328919902949159273
+    second: lumi antigo novo_12
+  - first:
+      213: 2354993453325702788
+    second: lumi antigo novo_13
+  - first:
+      213: 1194320330011904817
+    second: lumi antigo novo_14
+  - first:
+      213: 876610868466058673
+    second: lumi antigo novo_15
+  - first:
+      213: -156274302170673590
+    second: lumi antigo novo_16
+  - first:
+      213: -5263747256033062234
+    second: lumi antigo novo_17
+  - first:
+      213: -2053480598226690496
+    second: lumi antigo novo_18
+  - first:
+      213: 6511597565581928827
+    second: lumi antigo novo_19
+  - first:
+      213: 2042726633330923315
+    second: lumi antigo novo_20
+  - first:
+      213: -4226143298467693875
+    second: lumi antigo novo_21
+  - first:
+      213: -8920876848846124167
+    second: lumi antigo novo_22
+  - first:
+      213: -2635374997190062329
+    second: lumi antigo novo_23
+  - first:
+      213: 3230337853861951328
+    second: lumi antigo novo_24
+  - first:
+      213: -8196166139612400842
+    second: lumi antigo novo_25
+  - first:
+      213: -1075263063328125001
+    second: lumi antigo novo_26
+  - first:
+      213: 4827213477220160961
+    second: lumi antigo novo_27
+  - first:
+      213: 5615906131791577051
+    second: lumi antigo novo_28
+  - first:
+      213: -7772391155164385015
+    second: lumi antigo novo_29
+  - first:
+      213: 5936635822526421047
+    second: lumi antigo novo_30
+  - first:
+      213: 2870539102412369855
+    second: lumi antigo novo_31
+  - first:
+      213: -763164227731295364
+    second: lumi antigo novo_32
+  - first:
+      213: -7788033240312080788
+    second: lumi antigo novo_33
+  - first:
+      213: -7290984099952835079
+    second: lumi antigo novo_34
+  - first:
+      213: -263303177538756120
+    second: lumi antigo novo_35
+  - first:
+      213: -745294941531261978
+    second: lumi antigo novo_36
+  - first:
+      213: -159164675302988773
+    second: lumi antigo novo_37
+  - first:
+      213: 4174732464127734547
+    second: lumi antigo novo_38
+  - first:
+      213: -2703539702318679202
+    second: lumi antigo novo_39
+  - first:
+      213: 2400695918928048177
+    second: lumi antigo novo_40
+  - first:
+      213: -4727606239500206223
+    second: lumi antigo novo_41
+  - first:
+      213: 3466031674520420746
+    second: lumi antigo novo_42
+  - first:
+      213: 2308759429731638394
+    second: lumi antigo novo_43
+  - first:
+      213: 7937436237860430607
+    second: lumi antigo novo_44
+  - first:
+      213: -5613505574008964538
+    second: lumi antigo novo_45
+  - first:
+      213: -7213577896626225474
+    second: lumi antigo novo_46
+  - first:
+      213: 498894682642705960
+    second: lumi antigo novo_47
+  - first:
+      213: 6580307808273365575
+    second: lumi antigo novo_48
+  - first:
+      213: -1471665755378320498
+    second: lumi antigo novo_49
+  - first:
+      213: 1589932146244387174
+    second: lumi antigo novo_50
+  - first:
+      213: 1453621782411572091
+    second: lumi antigo novo_51
+  - first:
+      213: 3276923280614651352
+    second: lumi antigo novo_52
+  - first:
+      213: 5116294730588164686
+    second: lumi antigo novo_53
+  - first:
+      213: 1432086332067381889
+    second: lumi antigo novo_54
+  - first:
+      213: 1565125350938097369
+    second: lumi antigo novo_55
+  - first:
+      213: -1374544512597920192
+    second: lumi antigo novo_56
+  - first:
+      213: -8117317328756204894
+    second: lumi antigo novo_57
+  - first:
+      213: 8533603424461409093
+    second: lumi antigo novo_58
+  - first:
+      213: 923384835163072657
+    second: lumi antigo novo_59
+  - first:
+      213: -4182923250503942699
+    second: lumi antigo novo_60
+  - first:
+      213: -6677922829534093180
+    second: lumi antigo novo_61
+  - first:
+      213: 2766111455423933450
+    second: lumi antigo novo_62
+  - first:
+      213: -6105421387749169724
+    second: lumi antigo novo_63
+  - first:
+      213: 5027547027911602473
+    second: lumi antigo novo_64
+  - first:
+      213: 4714651411948470958
+    second: lumi antigo novo_65
+  - first:
+      213: 8152447908328751757
+    second: lumi antigo novo_66
+  - first:
+      213: -2435229158472067987
+    second: lumi antigo novo_67
+  - first:
+      213: 5086828014573990964
+    second: lumi antigo novo_68
+  - first:
+      213: -6431178194587986233
+    second: lumi antigo novo_69
+  - first:
+      213: -769643965972502806
+    second: lumi antigo novo_70
+  - first:
+      213: 1147560154408263591
+    second: lumi antigo novo_71
+  - first:
+      213: 1603126782329565357
+    second: lumi antigo novo_72
+  - first:
+      213: -122227469976449229
+    second: lumi antigo novo_73
+  - first:
+      213: -5475638680526644105
+    second: lumi antigo novo_74
+  - first:
+      213: 8790756947607183582
+    second: lumi antigo novo_75
+  - first:
+      213: 8063899079620350958
+    second: lumi antigo novo_76
+  - first:
+      213: -5897197538035980812
+    second: lumi antigo novo_77
+  - first:
+      213: -8339703622549933502
+    second: lumi antigo novo_78
+  - first:
+      213: -2705082888774380899
+    second: lumi antigo novo_79
+  - first:
+      213: 3115108794438641173
+    second: lumi antigo novo_80
+  - first:
+      213: -6338205119457769560
+    second: lumi antigo novo_81
+  - first:
+      213: 1582503937706095215
+    second: lumi antigo novo_82
+  - first:
+      213: 7899795913299765337
+    second: lumi antigo novo_83
+  - first:
+      213: 8600239733386265885
+    second: lumi antigo novo_84
+  - first:
+      213: 3279634371395074218
+    second: lumi antigo novo_85
+  - first:
+      213: 816588201532754518
+    second: lumi antigo novo_86
+  - first:
+      213: -3397828462738983879
+    second: lumi antigo novo_87
+  - first:
+      213: -3883063157839646416
+    second: lumi antigo novo_88
+  - first:
+      213: -5813667677304139637
+    second: lumi antigo novo_89
+  - first:
+      213: 5432650510835280689
+    second: lumi antigo novo_90
+  - first:
+      213: 7856395957616000566
+    second: lumi antigo novo_91
+  - first:
+      213: 5279220764147777756
+    second: lumi antigo novo_92
+  - first:
+      213: -4656285273798646519
+    second: lumi antigo novo_93
+  - first:
+      213: -4747603927225852187
+    second: lumi antigo novo_94
+  - first:
+      213: 1267762784394492658
+    second: lumi antigo novo_95
+  - first:
+      213: -2346409553574633343
+    second: lumi antigo novo_96
+  - first:
+      213: 6399955943353443598
+    second: lumi antigo novo_97
+  - first:
+      213: 1675224328545209713
+    second: lumi antigo novo_98
+  - first:
+      213: -7422253154444209161
+    second: lumi antigo novo_99
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lumi antigo novo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31610f3c9ff1b58a0800000000000000
+      internalID: -6315418894862379501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da73330133803a4c0800000000000000
+      internalID: -4277566205663692883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021acd4aea056e9b0800000000000000
+      internalID: -5051261221028978400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386a2e5bdbf64aa30800000000000000
+      internalID: 4225625210971399811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967fe8f2c6c609790800000000000000
+      internalID: -7525395765425932439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ce49f4090712050800000000000000
+      internalID: 5774019962378447915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64e57d3ecb582ce0800000000000000
+      internalID: -1429791940337605523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc637735201cb6a90800000000000000
+      internalID: -7319544553626192179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04091bd7c08ced020800000000000000
+      internalID: 2368550410017411136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c312a3d6d2177da60800000000000000
+      internalID: 7698746527933145404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0dd5102fafb299c0800000000000000
+      internalID: -3921861566607794931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f09d5f4df58f110800000000000000
+      internalID: 1294890261131366292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ec89ba8469ce3c0800000000000000
+      internalID: -4328919902949159273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48659d9811e9ea020800000000000000
+      internalID: 2354993453325702788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b036a2304139010800000000000000
+      internalID: 1194320330011904817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b58a2db0f85a2c00800000000000000
+      internalID: 876610868466058673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e4893a95dc4ddf0800000000000000
+      internalID: -156274302170673590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a256b852c963f6b0800000000000000
+      internalID: -5263747256033062234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e9a8596429083e0800000000000000
+      internalID: -2053480598226690496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b792fc86c77dd5a50800000000000000
+      internalID: 6511597565581928827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3375be8dc09395c10800000000000000
+      internalID: 2042726633330923315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca7fe4af09b955c0800000000000000
+      internalID: -4226143298467693875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b458355cda23480800000000000000
+      internalID: -8920876848846124167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f4a8227644d6bd0800000000000000
+      internalID: -2635374997190062329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06770fbb92774dc20800000000000000
+      internalID: 3230337853861951328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6337158325e514e80800000000000000
+      internalID: -8196166139612400842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf8a3ed0f5e311f0800000000000000
+      internalID: -1075263063328125001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_27
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c59fa4f415bdf240800000000000000
+      internalID: 4827213477220160961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_28
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfff5d5fd4bfed40800000000000000
+      internalID: 5615906131791577051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901f90d9c6be22490800000000000000
+      internalID: -7772391155164385015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738db82b3da236250800000000000000
+      internalID: 5936635822526421047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf6829da1436d720800000000000000
+      internalID: 2870539102412369855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c737ac4ad22b865f0800000000000000
+      internalID: -763164227731295364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66934cd7095be390800000000000000
+      internalID: -7788033240312080788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f54a43279831da90800000000000000
+      internalID: -7290984099952835079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 94
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5638298, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e12292b72f885cf0800000000000000
+      internalID: -263303177538756120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_37
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 704
+        width: 98
+        height: 64
+      alignment: 9
+      pivot: {x: 0.59183675, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1466c332988acdf0800000000000000
+      internalID: -159164675302988773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 95
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6210527, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313ff94be01afe930800000000000000
+      internalID: 4174732464127734547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_40
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 704
+        width: 97
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6494845, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130bf65083cf05120800000000000000
+      internalID: 2400695918928048177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 92
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57608694, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f7ba05c2b246eb0800000000000000
+      internalID: -4727606239500206223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_43
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 640
+        width: 100
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cdcf0187c5a0020800000000000000
+      internalID: 2308759429731638394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 99
+        height: 64
+      alignment: 9
+      pivot: {x: 0.53535354, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03ebf83430772e60800000000000000
+      internalID: 7937436237860430607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74afcd07613f15b50800000000000000
+      internalID: 6580307808273365575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b719eeac7939be0800000000000000
+      internalID: -1471665755378320498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6610fd9fcd2901610800000000000000
+      internalID: 1589932146244387174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73796a3f4d4c2410800000000000000
+      internalID: 1453621782411572091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d57e31ac58f97d20800000000000000
+      internalID: 3276923280614651352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4219ee33fab00740800000000000000
+      internalID: 5116294730588164686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa1d5a95ee795f80800000000000000
+      internalID: -8117317328756204894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b44110a137d6670800000000000000
+      internalID: 8533603424461409093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_59
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 198a0e28d9580dc00800000000000000
+      internalID: 923384835163072657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd7dfa377543f5c0800000000000000
+      internalID: -4182923250503942699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_61
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480262451904353a0800000000000000
+      internalID: -6677922829534093180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c56323889f254ba0800000000000000
+      internalID: -6105421387749169724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 94
+        height: 64
+      alignment: 9
+      pivot: {x: 0.28723404, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921fd32826f65c540800000000000000
+      internalID: 5027547027911602473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_66
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 384
+        width: 98
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4387755, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82cfc9dd20532170800000000000000
+      internalID: 8152447908328751757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4479167, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6459969bf3543ed0800000000000000
+      internalID: -2435229158472067987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_69
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c65850818ddfb6a0800000000000000
+      internalID: -6431178194587986233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 93
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6236559, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6afa404eca155f0800000000000000
+      internalID: -769643965972502806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_72
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 320
+        width: 99
+        height: 64
+      alignment: 9
+      pivot: {x: 0.42424244, y: 0.421875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da03ba690537f3610800000000000000
+      internalID: 1603126782329565357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumi antigo novo_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 103
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4368932, y: 0.390625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f424e73c2cd4ef0800000000000000
+      internalID: -122227469976449229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4329bfb1950cd02419524b2a76d34cb9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lumi antigo novo_0: -6315418894862379501
+      lumi antigo novo_1: -4277566205663692883
+      lumi antigo novo_10: -3921861566607794931
+      lumi antigo novo_11: 1294890261131366292
+      lumi antigo novo_12: -4328919902949159273
+      lumi antigo novo_13: 2354993453325702788
+      lumi antigo novo_14: 1194320330011904817
+      lumi antigo novo_15: 876610868466058673
+      lumi antigo novo_16: -156274302170673590
+      lumi antigo novo_17: -5263747256033062234
+      lumi antigo novo_18: -2053480598226690496
+      lumi antigo novo_19: 6511597565581928827
+      lumi antigo novo_2: -5051261221028978400
+      lumi antigo novo_20: 2042726633330923315
+      lumi antigo novo_21: -4226143298467693875
+      lumi antigo novo_22: -8920876848846124167
+      lumi antigo novo_23: -2635374997190062329
+      lumi antigo novo_24: 3230337853861951328
+      lumi antigo novo_25: -8196166139612400842
+      lumi antigo novo_26: -1075263063328125001
+      lumi antigo novo_27: 4827213477220160961
+      lumi antigo novo_28: 5615906131791577051
+      lumi antigo novo_29: -7772391155164385015
+      lumi antigo novo_3: 4225625210971399811
+      lumi antigo novo_30: 5936635822526421047
+      lumi antigo novo_31: 2870539102412369855
+      lumi antigo novo_32: -763164227731295364
+      lumi antigo novo_33: -7788033240312080788
+      lumi antigo novo_34: -7290984099952835079
+      lumi antigo novo_35: -263303177538756120
+      lumi antigo novo_36: -745294941531261978
+      lumi antigo novo_37: -159164675302988773
+      lumi antigo novo_38: 4174732464127734547
+      lumi antigo novo_39: -2703539702318679202
+      lumi antigo novo_4: -7525395765425932439
+      lumi antigo novo_40: 2400695918928048177
+      lumi antigo novo_41: -4727606239500206223
+      lumi antigo novo_42: 3466031674520420746
+      lumi antigo novo_43: 2308759429731638394
+      lumi antigo novo_44: 7937436237860430607
+      lumi antigo novo_45: -5613505574008964538
+      lumi antigo novo_46: -7213577896626225474
+      lumi antigo novo_47: 498894682642705960
+      lumi antigo novo_48: 6580307808273365575
+      lumi antigo novo_49: -1471665755378320498
+      lumi antigo novo_5: 5774019962378447915
+      lumi antigo novo_50: 1589932146244387174
+      lumi antigo novo_51: 1453621782411572091
+      lumi antigo novo_52: 3276923280614651352
+      lumi antigo novo_53: 5116294730588164686
+      lumi antigo novo_54: 1432086332067381889
+      lumi antigo novo_55: 1565125350938097369
+      lumi antigo novo_56: -1374544512597920192
+      lumi antigo novo_57: -8117317328756204894
+      lumi antigo novo_58: 8533603424461409093
+      lumi antigo novo_59: 923384835163072657
+      lumi antigo novo_6: -1429791940337605523
+      lumi antigo novo_60: -4182923250503942699
+      lumi antigo novo_61: -6677922829534093180
+      lumi antigo novo_62: 2766111455423933450
+      lumi antigo novo_63: -6105421387749169724
+      lumi antigo novo_64: 5027547027911602473
+      lumi antigo novo_65: 4714651411948470958
+      lumi antigo novo_66: 8152447908328751757
+      lumi antigo novo_67: -2435229158472067987
+      lumi antigo novo_68: 5086828014573990964
+      lumi antigo novo_69: -6431178194587986233
+      lumi antigo novo_7: -7319544553626192179
+      lumi antigo novo_70: -769643965972502806
+      lumi antigo novo_71: 1147560154408263591
+      lumi antigo novo_72: 1603126782329565357
+      lumi antigo novo_73: -122227469976449229
+      lumi antigo novo_74: -5475638680526644105
+      lumi antigo novo_8: 2368550410017411136
+      lumi antigo novo_9: 7698746527933145404
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
