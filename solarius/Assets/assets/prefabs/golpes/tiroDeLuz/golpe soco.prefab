@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6937585864742091581}
   - component: {fileID: 5250397587405762138}
   - component: {fileID: 1642916183479759960}
+  - component: {fileID: 8298098421915773573}
   m_Layer: 0
   m_Name: golpe soco
   m_TagString: dmgEnemy
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60e74cd174db98e49ba6146a423d4390, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2bab27160b57d94f9afdd78ad47961d, type: 3}
   m_Color: {r: 0.38431373, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &254774373797252989
@@ -163,8 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  spd: 5
-  capazMan: 2
+  spd: 0
   dmg: 0
 --- !u!114 &1642916183479759960
 MonoBehaviour:
@@ -179,3 +179,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageVaule: 30
+--- !u!50 &8298098421915773573
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4864854754986029256}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

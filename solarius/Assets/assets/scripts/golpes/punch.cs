@@ -1,24 +1,21 @@
 using UnityEngine;
 
-public class punch : MonoBehaviour
-{
+public class punch : MonoBehaviour {
     public float time;
     public float spd;
-    public float capazMan;
     public float dmg;
-    void Start()
-    {
-        Destroy(gameObject, 0.6875f);
+
+    void FixedUpdate() {
+        transform.position += transform.right * spd * Time.deltaTime;
+        spd += 0.5f;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        transform.position += transform.right * spd * capazMan * Time.deltaTime;
-        capazMan -= 0.1f;
-//        time -=- 1*Time.deltaTime;
-//        if(time <= 0){instanceDestroy()}
+    void OnTriggerEnter2D(Collider2D collision) {
+        Destroy(gameObject, 0.01f);
+        Debug.Log("colisao");
     }
-
-
+    void OnCollisionEnter2D(Collision2D collision) {
+        Destroy(gameObject, 0.01f);
+        Debug.Log("colisao2");
+    }
 }

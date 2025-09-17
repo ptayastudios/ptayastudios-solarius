@@ -80,47 +80,6 @@ public class lumi_golpes : MonoBehaviour
         Vector2 dir = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);
         transform.right = dir;
 
-        // if (aSlot < slots.Length)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.I))
-        //     {
-        //         slots[aSlot] = 1;
-        //     }
-        //     else if (Input.GetKeyDown(KeyCode.O))
-        //     {
-        //         slots[aSlot] = 2;
-        //     }
-        //     else if (Input.GetKeyDown(KeyCode.P))
-        //     {
-        //         slots[aSlot] = 3;
-        //     }
-
-
-        //     if (Input.GetKeyDown(KeyCode.L))
-        //     {
-        //         slots[aSlot] = 0;
-        //     }
-
-
-        //     if (Input.GetKeyDown(KeyCode.U) && aSlot > 0)
-        //     {
-        //         aSlot--;
-        //     }
-        //     else if (aSlot < slots.Length)
-        //     {
-        //         if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.O) || Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.J))
-        //         {
-        //             aSlot++;
-        //         }
-        //     }
-        // }
-
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            //Instantiate(explosion, lumiTransform.transform.position, this.gameObject.transform.rotation);
-        }
-
 
         if (fire == 0)
         {
@@ -166,7 +125,7 @@ public class lumi_golpes : MonoBehaviour
                 break;
 
             case 3:
-                anim.SetInteger("transition", 2);
+              /*  anim.SetInteger("transition", 2);
                 hold = false;
                 if (Input.GetButtonUp(bowButton))
                 {
@@ -178,7 +137,7 @@ public class lumi_golpes : MonoBehaviour
                     rb.AddForce(dir_ * arrowF, ForceMode2D.Impulse);
                     arw.transform.Rotate(0, 0, -45);
                     fire = 0;
-                }
+                }*/
                 break;
 
         }
